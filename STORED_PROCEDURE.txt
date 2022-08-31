@@ -1,9 +1,0 @@
-CREATE PROCEDURE SEARCH_EMPLOYEE (IN USER_NAME VARCHAR(100))
-	DYNAMIC RESULT SETS 1
-P1: BEGIN
-	-- Declare cursor
-	DECLARE cursor1 CURSOR WITH RETURN for
-	SELECT * FROM YFS_USER where USERNAME=USER_NAME;
-	-- Cursor left open for client application
-	OPEN cursor1;
-END P1
